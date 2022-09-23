@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CockTailDB API Loading</title>
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+    <header class="text-center pt-3 text-light">
+        <h1>Exploring CocktailDB API</h1>
+    </header>
+    <main>
+        <section class="container mt-5">
+            <h2 class="text-light">Cocktails Menu</h2>
+            <div class="input-group mb-3">
+                <input type="search" class="form-control" placeholder="Search your meals" id="search-drinks">
+                <button class="input-group-text" id="search-btn">Search</button>
+            </div>
+            <div>
+              <h3 id="search-message" class="text-center text-danger d-none">No Phone Found, try another search</h3>
+            </div>
+            <!-- spinner  -->
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border text-warning d-none" role="status" id="spinner-roll">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <!-- drinks container  -->
+            <div id="drinks-container" class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+                
+            </div>
+            <div id="btn-showAll" class="d-flex justify-content-center mb-3 mt-3 d-none">
+              <button class="btn btn-primary">
+                  Show All
+              </button>
+          </div>
+            <!-- Modal -->
+<div class="modal fade new-scroll" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-detail">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </section>
+    </main>
+
+    <script src="./Bootstrap/bootstrap.min.js"></script>
+    <script src="./JS/data.js"></script>
+</body>
+</html>
